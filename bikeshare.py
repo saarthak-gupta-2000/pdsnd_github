@@ -270,6 +270,8 @@ def user_stats(df):
     print('-'*40)
 
 def display_data(df):
+    """Displays raw data in sets of five."""
+    
     choice = input('Would you like to read some of the raw data? Yes/No ').lower()
     print()
     if choice=='yes' or choice=='y' or choice=='yus':
