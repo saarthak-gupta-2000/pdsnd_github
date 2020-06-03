@@ -65,7 +65,7 @@ def get_filters():
     while 1:
         choice = input('Do you want to filter the data by month and/or week? Yes/No ').lower()
         print()
-        if choice=='yes' or choice=='y' or choice=='yus':
+        if choice=='yes' or choice=='y' or choice=='yus' or choice=='yea' or choice=='yeah':
             choice=True
         elif choice=='no' or choice=='n' or choice=='nope':
             choice=False
@@ -274,7 +274,7 @@ def display_data(df):
     
     choice = input('Would you like to read some of the raw data? Yes/No ').lower()
     print()
-    if choice=='yes' or choice=='y' or choice=='yus':
+    if choice=='yes' or choice=='y' or choice=='yus' or choice=='yea' or choice=='yeah':
         choice=True
     elif choice=='no' or choice=='n' or choice=='nope':
         choice=False
@@ -289,7 +289,7 @@ def display_data(df):
                 print(df.iloc[i])
                 print()
             choice = input('Another five? Yes/No ').lower()
-            if choice=='yes' or choice=='y' or choice=='yus':
+            if choice=='yes' or choice=='y' or choice=='yus' or choice=='yea' or choice=='yeah':
                 continue
             elif choice=='no' or choice=='n' or choice=='nope':
                 break
@@ -310,7 +310,7 @@ def main():
 
         restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
         print()
-        if restart != 'yes' and restart != 'y' and restart != 'yus':
+        if restart != 'yes' and restart != 'y' and restart != 'yus' and restart !='yea' and restart!='yeah':
             break
 
 if __name__ == "__main__":
