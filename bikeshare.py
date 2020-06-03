@@ -60,6 +60,7 @@ def get_filters():
             continue
         city = CITY_DATA[city]
         break
+        
     # TO DO: get user input for month (all, january, february, ... , june)
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while 1:
@@ -87,6 +88,7 @@ def get_filters():
                     continue
                 month = MONTH_DATA[month]
                 day='all'
+                
             elif filter=='day':
                 print('Which day\'s data to look at? ')
                 day = input('Monday/mon, Tuesday/tues, Wednesday/wed, Thursday/thur, Friday/fri, Saturday/sat, Sunday/sun- ').lower()
@@ -96,6 +98,7 @@ def get_filters():
                     continue
                 day = WEEK_DATA[day]
                 month='all'
+                
             elif filter=='both':
                 print('Which month\'s data to look at?')
                 month = input('January/jan, February/feb, March/mar, April/apr, May, June/jun- ').lower()
@@ -111,6 +114,7 @@ def get_filters():
                     print('Sorry I did not understand that input. Could you try again?')
                     continue
                 day = WEEK_DATA[day]
+                
             else:
                 print('Sorry I did not understand that input. Could you try again?')
                 continue
