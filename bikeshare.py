@@ -60,12 +60,13 @@ def get_filters():
             continue
         city = CITY_DATA[city]
         break
+        
     # TO DO: get user input for month (all, january, february, ... , june)
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while 1:
         choice = input('Do you want to filter the data by month and/or week? Yes/No ').lower()
         print()
-        if choice=='yes' or choice=='y' or choice=='yus':
+        if choice=='yes' or choice=='y' or choice=='yus' or choice=='yea' or choice=='yeah':
             choice=True
         elif choice=='no' or choice=='n' or choice=='nope':
             choice=False
@@ -87,6 +88,7 @@ def get_filters():
                     continue
                 month = MONTH_DATA[month]
                 day='all'
+                
             elif filter=='day':
                 print('Which day\'s data to look at? ')
                 day = input('Monday/mon, Tuesday/tues, Wednesday/wed, Thursday/thur, Friday/fri, Saturday/sat, Sunday/sun- ').lower()
@@ -96,6 +98,7 @@ def get_filters():
                     continue
                 day = WEEK_DATA[day]
                 month='all'
+                
             elif filter=='both':
                 print('Which month\'s data to look at?')
                 month = input('January/jan, February/feb, March/mar, April/apr, May, June/jun- ').lower()
@@ -111,6 +114,7 @@ def get_filters():
                     print('Sorry I did not understand that input. Could you try again?')
                     continue
                 day = WEEK_DATA[day]
+                
             else:
                 print('Sorry I did not understand that input. Could you try again?')
                 continue
@@ -270,9 +274,11 @@ def user_stats(df):
     print('-'*40)
 
 def display_data(df):
+    """Displays raw data in sets of five."""
+    
     choice = input('Would you like to read some of the raw data? Yes/No ').lower()
     print()
-    if choice=='yes' or choice=='y' or choice=='yus':
+    if choice=='yes' or choice=='y' or choice=='yus' or choice=='yea' or choice=='yeah':
         choice=True
     elif choice=='no' or choice=='n' or choice=='nope':
         choice=False
@@ -287,7 +293,7 @@ def display_data(df):
                 print(df.iloc[i])
                 print()
             choice = input('Another five? Yes/No ').lower()
-            if choice=='yes' or choice=='y' or choice=='yus':
+            if choice=='yes' or choice=='y' or choice=='yus' or choice=='yea' or choice=='yeah':
                 continue
             elif choice=='no' or choice=='n' or choice=='nope':
                 break
@@ -308,7 +314,7 @@ def main():
 
         restart = input('\nWould you like to restart? Enter yes or no.\n').lower()
         print()
-        if restart != 'yes' and restart != 'y' and restart != 'yus':
+        if restart != 'yes' and restart != 'y' and restart != 'yus' and restart !='yea' and restart!='yeah':
             break
 
 if __name__ == "__main__":
